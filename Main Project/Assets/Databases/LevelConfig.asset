@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e3109b8d6de8c24daa6bfba272821cc, type: 3}
+  m_Name: LevelConfig
+  m_EditorClassIdentifier: 
+  levelInfoList:
+  - gameScene: 10
+    ai_Prefabs:
+    - {fileID: 152388, guid: d5b647b04059f54449a1b30d479ef697, type: 2}
+    - {fileID: 111746, guid: 7c7acbb299ac52348a8c692de38ad412, type: 2}
+    - {fileID: 162536, guid: 999fa823878ce41468649815e59c44a2, type: 2}
+    - {fileID: 129782, guid: 023e4d94e029a9e4e837f808313b725d, type: 2}
+    - {fileID: 104858, guid: 0b19815f81c719248a21ef179f94cf27, type: 2}
+    - {fileID: 134680, guid: f1e0ccaa65419b041a188df83f9f559d, type: 2}
+    - {fileID: 139618, guid: 41cc4b4ccb7faa145aca6ef950381efc, type: 2}
+    EnemyDirectionLeft: 1
