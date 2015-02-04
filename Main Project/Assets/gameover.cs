@@ -9,6 +9,7 @@ public class gameover : MonoBehaviour
 
     void Start()
     {
+        AudioManager.Instance.PlayMainTrack(Sound.MissionCompleteTrack);
         StartCoroutine(GameOver());
     }
     IEnumerator GameOver()

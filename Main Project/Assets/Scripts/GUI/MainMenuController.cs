@@ -56,14 +56,15 @@ public class MainMenuController : MonoBehaviour
     }
 
     //Options
-    public void ToggleSound()
-    {
-        Debug.Log("Sounds: "+ soundToggle.isOn);
-        AudioManager.Instance.TogglesSounds(soundToggle.isOn);
-    }
+    //public void ToggleSound()
+    //{
+    //    Debug.Log("Sounds: "+ soundToggle.isOn);
+    //    AudioManager.Instance.TogglesSounds(soundToggle.isOn);
+    //}
     void Start()
     {
-        soundToggle.isOn = AudioManager.Instance.SoundsOn;
+        //soundToggle.isOn = AudioManager.Instance.SoundsOn;
+        AudioManager.Instance.PlayMainTrack(Sound.TitleScreenTrack);
     }
     private void ClearGUI()
     {

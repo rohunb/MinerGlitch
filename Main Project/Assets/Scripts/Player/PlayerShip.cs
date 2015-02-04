@@ -16,7 +16,9 @@ public class PlayerShip : Ship
 
     public override void ApplyDamage(float damage)
     {
+        
         Health -= damage;
+        Debug.Log("taking damage: " + damage + " health: " + Health);
         healthBar.value -= damage / maxHP;
         if(Health<=0)
         {

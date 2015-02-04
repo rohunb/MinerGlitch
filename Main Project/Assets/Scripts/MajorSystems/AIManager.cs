@@ -58,7 +58,7 @@ public class AIManager : Singleton<AIManager> {
 
         if (currentSpawnData == null)
         {
-            Debug.LogError("No Spawn Data for AI Manager, no spawning will take place");
+            //Debug.LogError("No Spawn Data for AI Manager, no spawning will take place");
             Enemies = new List<GameObject>(GameObject.FindObjectsOfType<AIShip>().Select(s => s.gameObject));
             yield return null;
         }
@@ -120,7 +120,7 @@ public class AIManager : Singleton<AIManager> {
             currentSpawnData.spawnSequence[indexToUse], transform.position, 
             Quaternion.RotateTowards(Quaternion.identity, Quaternion.Euler(currentSpawnData.releaseDirection), 10000));
             
-        Debug.Log("indexToUse: " + indexToUse);
+        //Debug.Log("indexToUse: " + indexToUse);
        
         ++spawnSequenceIndex;
         ++numberSpawned;
@@ -375,7 +375,7 @@ public class AIManager : Singleton<AIManager> {
 
             if (spawnAnother) 
             {
-                Debug.Log("Spawn");
+                //Debug.Log("Spawn");
                 GameObject newShip = GetPrefabClone();
 
                 newShip.rigidbody2D.velocity = currentSpawnData.releaseDirection * currentSpawnData.releaseSpeed;

@@ -126,7 +126,7 @@ public class Orb : Weapon {
         }
         if (other.layer == EnemyLayer)
         {
-            Debug.Log(damage + " Damage to " + other.name);
+            //Debug.Log(damage + " Damage to " + other.name);
             WeakPoint weakPoint = other.GetComponent<WeakPoint>();
             if(weakPoint)
             {

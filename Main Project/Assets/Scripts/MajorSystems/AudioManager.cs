@@ -33,30 +33,30 @@ public class AudioManager : Singleton<AudioManager>
 
     public AudioSource MainTrack { get; private set; }
 
-    private bool soundsOn = true;
-    public bool SoundsOn
-    {
-        get { return soundsOn; }
-    }
+    //private bool soundsOn = true;
+    //public bool SoundsOn
+    //{
+    //    get { return soundsOn; }
+    //}
     [SerializeField]
     private string soundsOnName = "SoundOn";
 
-    public void TogglesSounds(bool on)
-    {
-        soundsOn = on;
-        if(on)
-        {
-            PlayerPrefs.SetInt(soundsOnName, 1);
-        }
-        else
-        {
-            PlayerPrefs.SetInt(soundsOnName, 0);
-        }
-        foreach (AudioSource source in sources)
-        {
-            source.mute = !on;
-        }
-    }
+    //public void TogglesSounds(bool on)
+    //{
+    //    soundsOn = on;
+    //    if(on)
+    //    {
+    //        PlayerPrefs.SetInt(soundsOnName, 1);
+    //    }
+    //    else
+    //    {
+    //        PlayerPrefs.SetInt(soundsOnName, 0);
+    //    }
+    //    foreach (AudioSource source in sources)
+    //    {
+    //        source.mute = !on;
+    //    }
+    //}
 
 
 
@@ -149,12 +149,12 @@ public class AudioManager : Singleton<AudioManager>
     private void Awake()
     {
         sources = new AudioSource[numSources];
-        soundsOn = PlayerPrefs.GetInt(soundsOnName) == 1 ? true : false;
-        Debug.Log("Sounds on: " + soundsOn);
+        //soundsOn = PlayerPrefs.GetInt(soundsOnName) == 1 ? true : false;
+        //Debug.Log("Sounds on: " + soundsOn);
         for (int i = 0; i < numSources; i++)
         {
             sources[i] = gameObject.AddComponent<AudioSource>();
-            sources[i].mute = !soundsOn;
+            //sources[i].mute = !soundsOn;
         }
         sound_clip_table = soundInfoList.ToDictionary(s => s.sound, s => s.audioClip);
     }

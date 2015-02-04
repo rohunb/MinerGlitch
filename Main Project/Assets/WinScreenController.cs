@@ -22,6 +22,11 @@ public class WinScreenController : MonoBehaviour
 
     public float transitionDelay = 4.0f;
 
+    private void Start()
+    {
+        AudioManager.Instance.PlayMainTrack(Sound.MissionCompleteTrack);
+    }
+
     public void Yay()
     {
         Debug.Log("Yay");

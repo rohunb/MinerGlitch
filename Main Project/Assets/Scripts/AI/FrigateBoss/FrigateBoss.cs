@@ -97,7 +97,7 @@ public class FrigateBoss : MonoBehaviour
     {
         health -= damage;
         healthBarSlider.value -= damage / maxHP;
-        Debug.Log("Health: " + health);
+        //Debug.Log("Health: " + health);
         if (health <= 0)
         {
             Application.LoadLevel(GameScene.WinScreen.ToString());
@@ -119,13 +119,11 @@ public class FrigateBoss : MonoBehaviour
 
     void Update()
     {
-#if UNITY_EDITOR
-        if (Input.GetKeyDown(KeyCode.G))
+        if (Input.GetKey(KeyCode.LeftShift) && Input.GetKeyDown(KeyCode.G))
         {
             TakeDamage(10);
         }
 
-#endif
        
         int numTurrets;
         switch (stage)
@@ -161,7 +159,7 @@ public class FrigateBoss : MonoBehaviour
         //ai_man.transform.rotation = hangar1.rotation;
         //ai_man.speed = Vector3.zero;
         stage = 1;
-        Debug.Log("Stage 1");
+        //Debug.Log("Stage 1");
         while (stage == 1)
         {
             int numTurrets = stage1Turrets.GetComponentsInChildren<AI_Turret>().Length;
@@ -185,7 +183,7 @@ public class FrigateBoss : MonoBehaviour
     IEnumerator Stage2()
     {
         stage = 2;
-        Debug.Log("Stage 2");
+        //Debug.Log("Stage 2");
 
         //frontSprite.material = glitchMat;
         //weakPoints[0].gameObject.SetActive(false);
@@ -215,7 +213,7 @@ public class FrigateBoss : MonoBehaviour
     IEnumerator Stage3()
     {
         stage = 3;
-        Debug.Log("stage 3");
+        //Debug.Log("stage 3");
 
 
         while (stage == 3)
@@ -306,7 +304,7 @@ public class FrigateBoss : MonoBehaviour
     }
     IEnumerator SpawnFighters(int numFighters, Transform hangar, bool glitch)
     {
-        Debug.Log("spawn");
+        //Debug.Log("spawn");
 
         int i = 0;
         while (i < numFighters)

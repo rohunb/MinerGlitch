@@ -13,7 +13,7 @@ public class ProjectileScaleEffect : Effect
 
     public override void Execute(Ship ship)
     {
-        Debug.Log("Projectile Scale effect");
+        //Debug.Log("Projectile Scale effect");
         ship.ModifyProjScale(projScaleFactor);
         StartCoroutine(RemoveEffectAfterDuration(ship));
     }

@@ -110,9 +110,12 @@ public class GlitchManager : MonoBehaviour
             default:
                 break;
         }
-        gameObject.GetComponent<Ship>().AddEffect(effect);
-        StartCoroutine(GlitchTrack());
-        GlitchTrack();
+        if (gameObject && gameObject.GetComponent<Ship>() != null)
+        {
+            gameObject.GetComponent<Ship>().AddEffect(effect);
+            StartCoroutine(GlitchTrack());
+            GlitchTrack();
+        }
     }
     private IEnumerator GlitchTrack()
     {

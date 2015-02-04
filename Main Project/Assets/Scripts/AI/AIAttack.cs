@@ -20,7 +20,7 @@ public class AIAttack : MonoBehaviour {
         while (true)
         {
             ///Do Fire Weapon
-            Debug.Log("fire");
+            //Debug.Log("fire");
             owningShip.EquippedWeapon.FireWeapon(owningShip.Accuracy);
 
             yield return new WaitForSeconds(weaponCooldown);

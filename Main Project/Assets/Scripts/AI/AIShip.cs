@@ -21,7 +21,7 @@ public class AIShip : Ship {
 
         if (Health <= 0.0f)
         {
-            Debug.Log(gameObject.name + "less than 0");
+            //Debug.Log(gameObject.name + "less than 0");
             AIManager.Instance.KillShip(gameObject);
         }
     }

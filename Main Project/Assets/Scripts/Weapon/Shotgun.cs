@@ -32,7 +32,7 @@ public class Shotgun : Weapon {
     {
         if (currentTimer >= reloadTimer)
         {
-            AudioManager.Instance.PlayOneShotSound(Sound.Shotgun,0.25f);
+            AudioManager.Instance.PlayOneShotSound(Sound.Shotgun,0.15f);
             float angle = -shotSpread * 0.5f;
             for (int i = 0; i < BASE_SHOT_COUNT + WeaponLevel-1; i++)
             {

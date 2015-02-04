@@ -14,7 +14,7 @@ public class ShipScaleEffect : Effect
 
     public override void Execute(Ship ship)
     {
-        Debug.Log("Scale Effect");
+        //Debug.Log("Scale Effect");
         ship.ModifyScale(scaleFactor);
         StartCoroutine(RemoveEffectAfterDuration(ship));
     }

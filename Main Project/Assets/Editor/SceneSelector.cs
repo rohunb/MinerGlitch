@@ -11,6 +11,12 @@ public class SceneSelector : Editor
     {
         OpenScene("GlitchSpashScreen");
     }
+
+    [MenuItem(menuName + "/GameOver")]
+    public static void GameOver()
+    {
+        OpenScene("GameOver");
+    }
     [MenuItem(menuName + "/Desktop")]
     public static void Desktop()
     {
