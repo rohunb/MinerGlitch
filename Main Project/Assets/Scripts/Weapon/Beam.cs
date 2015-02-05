@@ -49,6 +49,8 @@ public class Beam : Weapon
     {
         if (!coolDown)
         {
+            AudioManager.Instance.PlayOneShotSound(Sound.LaserBeam,0.5f);
+
             coolDown = true;
 
             float acc = Random.Range(-accuracy, accuracy);

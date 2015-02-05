@@ -120,19 +120,25 @@ public class GlitchManager : MonoBehaviour
     private IEnumerator GlitchTrack()
     {
         AudioSource source = AudioManager.Instance.MainTrack;
-        //float defaultPitch = source.pitch;
-        float currentTime = 0.0f;
-
-        do
+        if (source != null)
         {
-            source.pitch = Random.Range(pitchRange.x, pitchRange.y);
-            float waitTime = Random.Range(changeIntervalRange.x, changeIntervalRange.y);
-            currentTime += waitTime;
-            yield return new WaitForSeconds(waitTime);
 
-        } while (currentTime <= glitchTrackDuration);
+            //float defaultPitch = source.pitch;
+            float currentTime = 0.0f;
 
-        source.pitch = 1.0f;
+            do
+            {
+                source.pitch = Random.Range(pitchRange.x, pitchRange.y);
+                float waitTime = Random.Range(changeIntervalRange.x, changeIntervalRange.y);
+                currentTime += waitTime;
+                yield return new WaitForSeconds(waitTime);
+
+            } while (currentTime <= glitchTrackDuration);
+
+            source.pitch = 1.0f;
+        }
+        else
+            yield return null;
     }
     private Vector3 GetSpawnPosition()
     {

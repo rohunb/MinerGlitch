@@ -55,6 +55,10 @@ MonoBehaviour:
     audioClip: {fileID: 8300000, guid: ec385f1e7a228e74187550fa89658139, type: 3}
   - sound: 6
     audioClip: {fileID: 8300000, guid: 49b9b111298dd454d9f6442c68f98a39, type: 3}
+  - sound: 7
+    audioClip: {fileID: 8300000, guid: dbe21494eb74e9645954be5d7d3f7946, type: 3}
+  - sound: 8
+    audioClip: {fileID: 8300000, guid: e6acb93daddf8974ca98c2d64516a4dd, type: 3}
   soundsOnName: SoundOn
 --- !u!1001 &100100000
 Prefab:

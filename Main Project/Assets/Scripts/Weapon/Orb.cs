@@ -92,6 +92,7 @@ public class Orb : Weapon {
         //Debug.Log("orb fire call");
         if (currentTimer >= reloadTimer)
         {
+            AudioManager.Instance.PlayOneShotSound(Sound.Orb, 0.5f);
             int shotCount = BASE_SHOT_COUNT + WeaponLevel-1;
 
             AcquireTargets(shotCount);

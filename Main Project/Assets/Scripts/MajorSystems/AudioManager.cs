@@ -16,7 +16,9 @@ public enum Sound
     MissionCompleteTrack,
 
     //effects
-    Shotgun
+    Shotgun,
+    LaserBeam,
+    Orb
 
 }
 
